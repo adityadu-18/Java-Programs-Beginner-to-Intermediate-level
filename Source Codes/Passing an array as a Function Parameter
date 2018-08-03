@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class ArrayParameter {
+	static void display(int[] b)
+	{
+		System.out.println("Elements of the array are:");
+		for(int i=0;i<9;i++)
+		{	
+			System.out.println(b[i]);
+		}
+	}
+	
+	public static void main(String[] args) {
+		Scanner ob = new Scanner(System.in);
+		int[] a=new int[]{1,2,3,4,5,6,7,8,9};
+		display(a);
+	}
+
+}
