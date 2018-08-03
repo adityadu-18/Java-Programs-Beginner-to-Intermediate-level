@@ -1,0 +1,21 @@
+public class ArrayMultiplicationTable {
+ 
+    public static void main(String[] args) {
+        int[][] a = new int[10][10];
+        int row = 1, column = 1;
+        for (int x = 0; x < a.length; x++) {
+            for (int y = 0; y < a[x].length; y++) {
+                a[x][y] = row * column;
+                column = column + 1;
+            }
+            row = row + 1;
+            column = 1;
+        }
+        for (int x = 0; x < a.length; x++) {
+            for (int y = 0; y < a[x].length; y++) {
+                System.out.print( a[x][y] + " \t| ");
+            }
+            System.out.println();
+        }
+    }
+}
