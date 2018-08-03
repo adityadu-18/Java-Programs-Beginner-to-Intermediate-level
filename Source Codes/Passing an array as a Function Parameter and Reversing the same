@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class ArrayRevParameter {
+		static int n;
+	static int[] rev(int[] b)
+	{	
+		int temp;
+		System.out.println("Elements of the array are:");
+		for(int i=0;i<n/2;i++)
+		{	
+			temp=b[n-i-1];
+			b[n-i-1]=b[i];
+			b[i]=temp;
+		}
+		return b;
+	}
+	public static void main(String[] args) {
+		Scanner ob = new Scanner(System.in);
+		System.out.println("Enter array size:");
+		n=ob.nextInt();
+		int[] a = new int[n];
+		System.out.println("Enter Array Elements:");
+		for(int i=0;i<n;i++)
+		{
+			a[i]=ob.nextInt();
+		}
+				int[] c = rev(a);
+		for(int i=0;i<n;i++)
+		{
+			System.out.println(c[i]);
+		}
+		
+}
+
+}
